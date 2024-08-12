@@ -1,13 +1,48 @@
+import React, { useState } from 'react';
+import Step from './Step';
 
-import React from "react";
-import './../styles/App.css';
+function App() {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    model: '',
+    car_price: '',
+    card_info: '',
+    expiry_date: ''
+  });
 
-const App = () => {
+  const handleChange = (event) => {
+    const { id, value } = event.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  const handleNext = () => {
+    setCurrentStep(currentStep + 1);
+  };
+
+  const handlePrevious = () => {
+    setCurrentStep(currentStep - 1);
+  };
+
+  const handleSubmit = () => {
+    alert('Form submitted!');
+    console.log(formData);
+  };
+
   return (
     <div>
-        {/* Do not remove the main div */}
+      <h1>Multi-Step Form</h1>
+      <Step
+        step={currentStep}
+        formData={formData}
+        onChange={handleChange}
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+        onSubmit={handleSubmit}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
