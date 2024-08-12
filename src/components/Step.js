@@ -1,6 +1,8 @@
 import React from 'react';
 
 function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
+  console.log(`Rendering Step: ${step}`); // Debugging
+
   return (
     <div>
       {step === 1 && (
