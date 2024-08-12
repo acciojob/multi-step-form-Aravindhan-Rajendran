@@ -17,17 +17,17 @@ function App() {
     setFormData({ ...formData, [id]: value });
   };
 
-const handleNext = () => {
-  if (currentStep < 3) {
-    setTimeout(() => setCurrentStep(prevStep => prevStep + 1), 1000);
-  }
-};
+  const handleNext = () => {
+    if (currentStep < 3) {
+      setCurrentStep(prevStep => prevStep + 1);
+    }
+  };
 
-const handlePrevious = () => {
-  if (currentStep > 1) {
-    setTimeout(() => setCurrentStep(prevStep => prevStep - 1), 1000);
-  }
-};
+  const handlePrevious = () => {
+    if (currentStep > 1) {
+      setCurrentStep(prevStep => prevStep - 1);
+    }
+  };
 
   const handleSubmit = () => {
     alert('Form submitted!');
