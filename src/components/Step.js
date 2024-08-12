@@ -4,7 +4,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
   return (
     <div>
       {step === 1 && (
-        <div>
+        <div id="step1">
           <h2>Step 1: Personal Information</h2>
           <label>
             First Name:
@@ -29,7 +29,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
       )}
 
       {step === 2 && (
-        <div>
+        <div id="step2">
           <h2>Step 2: Car Information</h2>
           <label>
             Car Model:
@@ -54,7 +54,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
       )}
 
       {step === 3 && (
-        <div>
+        <div id="step3">
           <h2>Step 3: Payment Information</h2>
           <label>
             Card Information:
