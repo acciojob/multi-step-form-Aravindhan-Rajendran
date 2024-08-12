@@ -18,17 +18,19 @@ function App() {
   };
 
   const handleNext = () => {
-    setCurrentStep(currentStep + 1);
+    setCurrentStep(prevStep => prevStep + 1);
   };
 
   const handlePrevious = () => {
-    setCurrentStep(currentStep - 1);
+    setCurrentStep(prevStep => prevStep - 1);
   };
 
   const handleSubmit = () => {
     alert('Form submitted!');
     console.log(formData);
   };
+
+  console.log(`Current Step: ${currentStep}`); // Debugging
 
   return (
     <div>
