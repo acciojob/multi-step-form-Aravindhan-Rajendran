@@ -3,9 +3,8 @@ import React from 'react';
 function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
   return (
     <div>
-      {step === 1 && (
-        <div id="step1">
-          <h2>Step 1: Personal Information</h2>
+      <div id="step1" style={{ display: step === 1 ? 'block' : 'none' }}>
+                  <h2>Step 1: Personal Information</h2>
           <label>
             First Name:
             <input
@@ -25,12 +24,10 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
               onChange={onChange}
             />
           </label>
-        </div>
-      )}
+      </div>
 
-      {step === 2 && (
-        <div id="step2">
-          <h2>Step 2: Car Information</h2>
+      <div id="step2" style={{ display: step === 2 ? 'block' : 'none' }}>
+                  <h2>Step 2: Car Information</h2>
           <label>
             Car Model:
             <input
@@ -50,12 +47,10 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
               onChange={onChange}
             />
           </label>
-        </div>
-      )}
+      </div>
 
-      {step === 3 && (
-        <div id="step3">
-          <h2>Step 3: Payment Information</h2>
+      <div id="step3" style={{ display: step === 3 ? 'block' : 'none' }}>
+         <h2>Step 3: Payment Information</h2>
           <label>
             Card Information:
             <input
@@ -75,8 +70,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
               onChange={onChange}
             />
           </label>
-        </div>
-      )}
+      </div>
 
       <div>
         {step > 1 && <button onClick={onPrevious}>Previous</button>}
@@ -89,5 +83,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
     </div>
   );
 }
+
+
 
 export default Step;
