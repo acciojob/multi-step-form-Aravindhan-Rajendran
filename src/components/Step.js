@@ -73,11 +73,11 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
       </div>
 
       <div>
-        {step > 1 && <button onClick={onPrevious}>Previous</button>}
+        {step > 1 && <button type="button" onClick={onPrevious}>Previous</button>}
         {step < 3 ? (
-          <button onClick={onNext}>Next</button>
+          <button type="button" onClick={onNext}>Next</button>
         ) : (
-          <button onClick={onSubmit}>Submit</button>
+          <button type="button" onClick={onSubmit}>Submit</button>
         )}
       </div>
     </div>
