@@ -72,14 +72,14 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
           </label>
       </div>
 
-      <div>
-        {step > 1 && <button type="button" onClick={onPrevious}>Previous</button>}
-        {step < 3 ? (
-          <button type="button" onClick={onNext}>Next</button>
-        ) : (
-          <button type="button" onClick={onSubmit}>Submit</button>
-        )}
-      </div>
+<div>
+  {step > 1 && <button type="button" onClick={onPrevious}>Previous</button>}
+  {step < 3 ? (
+    <button type="button" onClick={onNext}>Next</button>
+  ) : (
+    <button type="button" onClick={onSubmit}>Submit</button>
+  )}
+</div>
     </div>
   );
 }
