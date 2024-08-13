@@ -24,7 +24,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
-              <button type="button">previous</button>
+              <button type="button">Next</button>
       </div>
 
       <div id="step2" style={{ display: step === 2 ? 'block' : 'none' }}>
@@ -48,7 +48,8 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
-              <button type="button">previous</button>
+              <button type="button" onClick={onPrevious}>Previous</button>
+              <button type="button" onClick={onNext}>Next</button>
       </div>
 
       <div id="step3" style={{ display: step === 3 ? 'block' : 'none' }}>
@@ -72,24 +73,8 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
-              <button type="button">previous</button>
-      </div>
-
-      <div>
-        {step > 1 && (
-          <button type="button" onClick={onPrevious} data-testid="previous-button">
-            Previous
-          </button>
-        )}
-        {step < 3 ? (
-          <button type="button" onClick={onNext} data-testid="next-button">
-            Next
-          </button>
-        ) : (
-          <button type="button" onClick={onSubmit} data-testid="submit-button">
-            Submit
-          </button>
-        )}
+              <button type="button" onClick={onPrevious}>Previous</button>
+              <button type="button" onClick={onSubmit}>Submit</button>
       </div>
     </div>
   );
