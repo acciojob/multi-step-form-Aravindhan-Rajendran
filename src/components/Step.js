@@ -24,6 +24,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
+              <button type="button">previous</button>
       </div>
 
       <div id="step2" style={{ display: step === 2 ? 'block' : 'none' }}>
@@ -47,6 +48,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
+              <button type="button">previous</button>
       </div>
 
       <div id="step3" style={{ display: step === 3 ? 'block' : 'none' }}>
@@ -70,6 +72,7 @@ function Step({ step, formData, onChange, onNext, onPrevious, onSubmit }) {
             onChange={onChange}
           />
         </label>
+              <button type="button">previous</button>
       </div>
 
       <div>
